@@ -1,0 +1,14 @@
+micronaut:
+    environments: test
+    application:
+        name: spring-config-sample
+    config-client:
+        enabled: true
+
+spring:
+    application:
+        name: ${micronaut.application.name}
+    cloud:
+        config:
+            enabled: true
+            uri: http://localhost:8081/configserver
