@@ -25,36 +25,46 @@
         </dependency>
         <dependency>
             <groupId>io.micronaut</groupId>
-            <artifactId>http-client</artifactId>
+            <artifactId>micronaut-http</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.micronaut</groupId>
-            <artifactId>http-server-netty</artifactId>
+            <artifactId>micronaut-http-netty</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.micronaut</groupId>
-            <artifactId>inject</artifactId>
+            <artifactId>micronaut-http-server</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.micronaut</groupId>
-            <artifactId>discovery-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.micronaut</groupId>
-            <artifactId>runtime</artifactId>
+            <artifactId>micronaut-http-server-netty</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.micronaut</groupId>
-            <artifactId>management</artifactId>
+            <artifactId>micronaut-inject</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.micronaut</groupId>
-            <artifactId>inject-java</artifactId>
+            <artifactId>micronaut-discovery-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.micronaut</groupId>
+            <artifactId>micronaut-runtime</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.micronaut</groupId>
+            <artifactId>micronaut-management</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.micronaut</groupId>
+            <artifactId>micronaut-inject-java</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>

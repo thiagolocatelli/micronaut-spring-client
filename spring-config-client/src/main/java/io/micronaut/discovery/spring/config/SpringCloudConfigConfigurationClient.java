@@ -73,7 +73,6 @@ public class SpringCloudConfigConfigurationClient implements ConfigurationClient
 
     private ExecutorService executionService;
 
-    @Value(SpringCloudConfiguration.SPRING_CLOUD_CONFIG_ENDPOINT)
     private String uri;
 
     /**
@@ -83,12 +82,14 @@ public class SpringCloudConfigConfigurationClient implements ConfigurationClient
      * @param environment               The environment
      */
     public SpringCloudConfigConfigurationClient(SpringCloudConfigClient springCloudConfigClient, SpringCloudConfiguration springCloudConfiguration,
-                                                ApplicationConfiguration applicationConfiguration, Environment environment) {
+                                                ApplicationConfiguration applicationConfiguration, Environment environment,
+                                                @Value(SpringCloudConfiguration.SPRING_CLOUD_CONFIG_ENDPOINT) String uri) {
 
         this.springCloudConfigClient = springCloudConfigClient;
         this.springCloudConfiguration = springCloudConfiguration;
         this.applicationConfiguration = applicationConfiguration;
         this.environment = environment;
+        this.uri = uri;
 
         if (environment != null) {
             Collection<PropertySourceLoader> loaders = environment.getPropertySourceLoaders();
@@ -110,7 +111,6 @@ public class SpringCloudConfigConfigurationClient implements ConfigurationClient
         String applicationName = applicationConfiguration.getName().get();
         Set<String> activeNames = environment.getActiveNames();
         String profiles = activeNames.stream()
-                .map(n -> n.toString())
                 .collect(Collectors.joining( "," ));
 
         if(StringUtils.isEmpty(profiles)) {

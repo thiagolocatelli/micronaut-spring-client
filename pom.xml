@@ -15,7 +15,7 @@
 
     <properties>
 
-        <micronaut.version>1.0.0.M4</micronaut.version>
+        <micronaut.version>1.0.0</micronaut.version>
         <logback.version>1.2.3</logback.version>
         <junit.version>4.12</junit.version>
         <jdk.version>1.8</jdk.version>
@@ -40,7 +40,7 @@
 
             <dependency>
                 <groupId>io.micronaut</groupId>
-                <artifactId>bom</artifactId>
+                <artifactId>micronaut-bom</artifactId>
                 <version>${micronaut.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -121,7 +121,7 @@
                         <annotationProcessorPaths>
                             <path>
                                 <groupId>io.micronaut</groupId>
-                                <artifactId>inject-java</artifactId>
+                                <artifactId>micronaut-inject-java</artifactId>
                                 <version>${micronaut.version}</version>
                             </path>
                         </annotationProcessorPaths>
