@@ -18,7 +18,7 @@ package io.micronaut.discovery.spring.config.client;
 
 import io.micronaut.context.annotation.Requires;
 import io.micronaut.discovery.spring.SpringCloudConfiguration;
-import io.micronaut.http.client.Client;
+import io.micronaut.http.client.annotation.Client;
 
 /**
  * Abstract implementation of {@link SpringCloudConfigClient}.
